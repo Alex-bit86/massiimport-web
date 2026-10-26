@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Massi Import</title>
+<meta name="description" content="Yo no revendo, yo importo, por eso mis precios no tienen intermediarios. Bisutería en baño de oro directo del importador, precio al detal y al mayor.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Massi Import solution group">
+<meta property="og:title" content="Massi Import — Compra directo al importador">
+<meta property="og:description" content="Yo no revendo, yo importo, por eso mis precios no tienen intermediarios. Bisutería en baño de oro, precio regular y mayoreo. Preventa por WhatsApp.">
+<meta property="og:url" content="https://massiimport.com/">
+<meta property="og:image" content="https://massiimport.com/og-image.jpg">
+<meta property="og:image:secure_url" content="https://massiimport.com/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Massi Import — Yo no revendo, yo importo. Bisutería en baño de oro, detal y mayoreo.">
+<meta property="og:locale" content="es_LA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://massiimport.com/og-image.jpg">
+<meta name="theme-color" content="#16a34a">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="logo-sm.webp" type="image/webp">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/pjs-400.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/pjs-600.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/pjs-700.woff2) format("woff2")}
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/pjs-800.woff2) format("woff2")}
+</style>
+<style>
+:root{
+  --bg:#ffffff; --soft:#f6f8f5; --soft2:#eef3ec; --line:#e4e9e1;
+  --ink:#0f1a12; --ink2:#3d4a40; --mut:#6b776d;
+  --green:#16a34a; --green-d:#0f7a37; --green-l:#dcfce7; --green-xl:#f0fdf4;
+  --gold:#b8892b; --gold-l:#fbf3e2;
+  --r:18px; --shadow:0 1px 2px rgba(15,26,18,.04),0 8px 24px rgba(15,26,18,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased;padding-bottom:96px}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+
+/* Top strip */
+.strip{background:var(--ink);color:#e8efe9;font-size:12.5px;text-align:center;padding:8px 16px;font-weight:500}
+.strip b{color:#86efac;font-weight:700}
+
+/* Header */
+header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.head{display:flex;align-items:center;gap:14px;height:68px}
+.logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.logo img{width:42px;height:42px;border-radius:12px;object-fit:cover}
+.logo b{display:block;font-size:16px;font-weight:800;letter-spacing:-.2px;line-height:1.05}
+.logo small{display:block;font-size:10px;font-weight:700;letter-spacing:1.4px;color:var(--green)}
+.search{flex:1;position:relative;max-width:520px;margin:0 auto}
+.search input{width:100%;height:44px;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:0 16px 0 42px;font:inherit;font-size:14.5px;color:var(--ink);outline:none;transition:.15s}
+.search input:focus{background:#fff;border-color:var(--green);box-shadow:0 0 0 4px var(--green-l)}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--mut)}
+.cart-btn{position:relative;flex:0 0 auto;display:flex;align-items:center;gap:8px;height:44px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:700;font-size:14px;color:var(--ink)}
+.cart-btn .n{min-width:20px;height:20px;border-radius:999px;background:var(--green);color:#fff;font-size:11.5px;display:grid;place-items:center;padding:0 5px}
+.wa-btn{flex:0 0 auto;display:flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:999px;background:var(--green);color:#fff;font-weight:700;font-size:14px;box-shadow:0 6px 16px rgba(22,163,74,.25)}
+.wa-btn:hover{background:var(--green-d)}
+@media(max-width:760px){.search{display:none}.wa-btn span,.cart-btn span{display:none}.wa-btn,.cart-btn{padding:0 13px}}
+.search-m{display:none;padding:0 16px 12px}
+@media(max-width:760px){.search-m{display:block}.search-m .search{display:block;max-width:none}}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--green-xl),#fff 85%);border-bottom:1px solid var(--line)}
+.hero-in{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding:48px 16px 44px}
+@media(max-width:860px){.hero-in{grid-template-columns:1fr;padding:26px 16px 28px;gap:22px}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px 6px 8px;font-size:12.5px;font-weight:600;color:var(--ink2)}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px var(--green-l)}
+.hero h1{font-size:clamp(30px,4.6vw,50px);line-height:1.04;letter-spacing:-1.4px;font-weight:800;margin:16px 0 14px}
+.hero h1 em{font-style:normal;color:var(--green)}
+.hero p.lead{font-size:16.5px;line-height:1.6;color:var(--ink2);max-width:520px}
+.hero .quote{margin-top:16px;padding-left:14px;border-left:3px solid var(--gold);color:var(--ink2);font-size:14.5px;font-style:italic;max-width:520px}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 24px;border-radius:999px;font-weight:700;font-size:15px;border:1px solid transparent;transition:.15s}
+.btn-p{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(22,163,74,.25)}
+.btn-p:hover{background:var(--green-d)}
+.btn-s{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-s:hover{border-color:var(--ink2)}
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.collage div{border-radius:20px;overflow:hidden;background:var(--soft);aspect-ratio:1/1;box-shadow:var(--shadow)}
+.collage div:nth-child(1){grid-row:span 2;aspect-ratio:auto}
+.collage img{width:100%;height:100%;object-fit:cover}
+
+/* Trust */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:22px 0}
+@media(max-width:860px){.trust{grid-template-columns:1fr 1fr}}
+.trust>div{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:14px;background:var(--soft)}
+.trust .ic{flex:0 0 auto;width:36px;height:36px;border-radius:10px;background:#fff;display:grid;place-items:center;color:var(--green);border:1px solid var(--line)}
+.trust b{display:block;font-size:13.5px;font-weight:700}
+.trust span{display:block;font-size:12.5px;color:var(--mut);line-height:1.4;margin-top:2px}
+
+/* Catalog toolbar */
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:28px 0 14px;flex-wrap:wrap}
+.sec-head h2{font-size:26px;letter-spacing:-.6px;font-weight:800}
+.sec-head p{color:var(--mut);font-size:14px;margin-top:4px}
+.mode{display:inline-flex;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px}
+.mode button{border:0;background:transparent;height:38px;padding:0 16px;border-radius:999px;font-weight:700;font-size:13.5px;color:var(--mut)}
+.mode button.on{background:#fff;color:var(--green-d);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 6px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;display:flex;align-items:center;gap:8px;height:42px;padding:0 14px 0 5px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:600;font-size:13.5px;color:var(--ink2);transition:.15s}
+.chip img,.chip .em{width:32px;height:32px;border-radius:50%;object-fit:cover;background:var(--soft);display:grid;place-items:center;font-size:15px}
+.chip.on{border-color:var(--green);background:var(--green-xl);color:var(--green-d)}
+.chip small{color:var(--mut);font-weight:600}
+
+/* Grid & cards */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:16px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+@media(min-width:1040px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:.18s}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-2px);border-color:#d5ddd1}
+.ph{position:relative;aspect-ratio:1/1;background:var(--soft);cursor:zoom-in}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph .none{width:100%;height:100%;display:grid;place-items:center;color:var(--mut);font-size:13px;text-align:center}
+.tag{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.95);color:var(--green-d);font-size:10.5px;font-weight:700;padding:5px 9px;border-radius:999px;border:1px solid var(--green-l);letter-spacing:.2px}
+.body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.code{font-size:11px;color:var(--mut);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.name{font-size:14.5px;font-weight:700;line-height:1.3;color:var(--ink)}
+.prices{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.prices .main{font-size:21px;font-weight:800;letter-spacing:-.4px;color:var(--ink)}
+.prices .alt{font-size:12.5px;color:var(--mut);font-weight:600}
+.prices .alt b{color:var(--green-d)}
+.stock{font-size:12px;color:var(--mut)}
+.stock b{color:var(--green-d)}
+.row{display:flex;gap:8px;align-items:center;margin-top:6px}
+.qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;height:40px}
+.qty button{width:34px;height:38px;border:0;background:none;font-size:17px;font-weight:700;color:var(--ink2)}
+.qty span{min-width:20px;text-align:center;font-weight:700;font-size:14px}
+.add{flex:1;height:40px;border:0;border-radius:999px;background:var(--green);color:#fff;font-weight:700;font-size:13.5px;transition:.15s}
+.add:hover{background:var(--green-d)}
+.add.ok{background:var(--ink)}
+.empty{text-align:center;color:var(--mut);padding:40px 10px;font-size:14.5px}
+
+@media(max-width:699px){.row{flex-direction:column;align-items:stretch}.qty{justify-content:space-between}.row .add{flex:none}.body{padding:10px 11px 12px}.prices .main{font-size:19px}
+.collage{grid-template-columns:repeat(3,1fr)}.collage div:nth-child(1){grid-row:auto;aspect-ratio:1/1}}
+/* How + FAQ */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+@media(max-width:760px){.how{grid-template-columns:1fr}}
+.how div{border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.how .n{width:34px;height:34px;border-radius:50%;background:var(--green-l);color:var(--green-d);font-weight:800;display:grid;place-items:center;margin-bottom:12px}
+.how b{display:block;font-size:15.5px;margin-bottom:6px}
+.how span{color:var(--mut);font-size:14px;line-height:1.55}
+.pay{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.pay span{padding:9px 14px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-weight:700;font-size:13px;color:var(--ink2)}
+.faq{margin-top:12px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{font-weight:700;font-size:15px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::after{content:"+";color:var(--green);font-size:20px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--ink2);font-size:14.5px;line-height:1.6;margin-top:8px;max-width:760px}
+
+/* CTA band + footer */
+.band{margin:44px 0 0;background:var(--green);color:#fff;border-radius:24px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.band h3{font-size:24px;letter-spacing:-.5px}
+.band p{opacity:.9;margin-top:4px;font-size:14.5px}
+.band a{background:#fff;color:var(--green-d)}
+footer{margin-top:40px;border-top:1px solid var(--line);background:var(--soft)}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:26px 16px;font-size:13.5px;color:var(--mut);line-height:1.7}
+.foot b{color:var(--ink)}
+
+/* Sticky bar */
+#bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:none}
+#bar .in{max-width:640px;margin:0 auto;background:var(--ink);color:#fff;border-radius:18px;padding:10px 10px 10px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 14px 34px rgba(15,26,18,.3)}
+#bar .t{font-size:12.5px;opacity:.8}
+#bar .t b{display:block;font-size:17px;opacity:1;color:#86efac}
+#bar button{margin-left:auto;height:46px;padding:0 20px;border:0;border-radius:14px;background:var(--green);color:#fff;font-weight:800;font-size:14.5px}
+
+/* Drawer */
+.ov{position:fixed;inset:0;z-index:60;background:rgba(15,26,18,.45);display:none}
+.ov.open{display:block}
+.drawer{position:absolute;right:0;top:0;bottom:0;width:min(460px,100%);background:#fff;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.12)}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+.dh h3{font-size:19px;letter-spacing:-.3px}
+.x{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;color:var(--ink2)}
+.db{flex:1;overflow-y:auto;padding:16px 20px}
+.df{border-top:1px solid var(--line);padding:16px 20px calc(16px + env(safe-area-inset-bottom))}
+.lab{font-size:12px;font-weight:700;color:var(--mut);letter-spacing:.5px;text-transform:uppercase;margin:16px 0 8px}
+.mode.full{display:flex}.mode.full button{flex:1}
+.li{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.li img{width:60px;height:60px;border-radius:12px;object-fit:cover;background:var(--soft)}
+.li .i{flex:1;min-width:0}
+.li .nm{font-weight:700;font-size:14px;line-height:1.3}
+.li .sm{font-size:12.5px;color:var(--mut);margin-top:2px}
+.li .ctl{display:flex;align-items:center;gap:10px;margin-top:6px}
+.li .ctl .qty{height:32px}.li .ctl .qty button{width:28px;height:30px;font-size:15px}
+.li .rm{border:0;background:none;color:#dc2626;font-size:12.5px;font-weight:600}
+.li .pr{font-weight:800;font-size:14.5px;white-space:nowrap}
+.fld{display:grid;gap:10px}
+.fld input,.fld select{width:100%;height:46px;border:1px solid var(--line);border-radius:12px;padding:0 14px;font:inherit;font-size:14.5px;color:var(--ink);background:#fff;outline:none}
+.fld input:focus,.fld select:focus{border-color:var(--green);box-shadow:0 0 0 4px var(--green-l)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sum{display:flex;justify-content:space-between;font-size:14px;color:var(--ink2);margin:4px 0}
+.sum.g{font-size:19px;font-weight:800;color:var(--ink);margin-top:10px}
+.send{width:100%;height:54px;border:0;border-radius:14px;background:var(--green);color:#fff;font-weight:800;font-size:15.5px;margin-top:14px;display:flex;align-items:center;justify-content:center;gap:8px}
+.send:disabled{background:#a7c9b1;cursor:not-allowed}
+.hint{font-size:12px;color:var(--mut);text-align:center;margin-top:8px;line-height:1.5}
+.err{color:#dc2626;font-size:12.5px;margin-top:6px;display:none}
+
+/* Lightbox */
+.lb{position:fixed;inset:0;z-index:70;background:rgba(15,26,18,.6);display:none;align-items:center;justify-content:center;padding:16px}
+.lb.open{display:flex}
+.lb .box{background:#fff;border-radius:22px;overflow:hidden;max-width:880px;width:100%;display:grid;grid-template-columns:1.1fr .9fr;max-height:92vh}
+@media(max-width:760px){.lb .box{grid-template-columns:1fr;overflow-y:auto}}
+.lb .im{background:var(--soft);aspect-ratio:1/1}
+.lb .im img{width:100%;height:100%;object-fit:contain}
+.lb .tx{padding:24px;display:flex;flex-direction:column;gap:10px;position:relative}
+.lb .tx h3{font-size:22px;letter-spacing:-.4px;line-height:1.2;padding-right:40px}
+.lb .x{position:absolute;top:16px;right:16px}
+.pp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.pp div{border:1px solid var(--line);border-radius:14px;padding:12px}
+.pp small{display:block;font-size:11px;font-weight:700;color:var(--mut);letter-spacing:.5px}
+.pp b{font-size:22px;letter-spacing:-.4px}
+.pp div.m b{color:var(--green-d)}
+.toast{position:fixed;left:50%;top:84px;max-width:calc(100% - 32px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transform:translateX(-50%) translateY(-20px);background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:13.5px;font-weight:600;opacity:0;transition:.25s;z-index:80;pointer-events:none}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.pl{display:block;font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);line-height:1.1}
+.lb .im .none{display:grid;place-items:center;text-align:center;height:100%;min-height:220px;color:var(--mut)}
+</style>
+</head>
+<body>
+
+<div class="strip">Embarque 1 de bisutería en <b>preventa</b> · Aparta hoy y recibe al llegar a Venezuela</div>
+
+<header>
+  <div class="wrap head">
+    <a class="logo" href="#top"><img src="logo-sm.webp" alt="Massi Import" width="44" height="44"><div><b>Massi Import</b><small>SOLUTION GROUP</small></div></a>
+    <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar cadenas, sets, dijes, código…" autocomplete="off"></label>
+    <button class="cart-btn" onclick="openCart()" aria-label="Ver pedido"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span>Pedido</span><i class="n" id="cn">0</i></button>
+    <a class="wa-btn" href="https://wa.me/12143000974?text=Hola%20Massi%20Import%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.7-.1 1.3Z"/></svg><span>WhatsApp</span></a>
+  </div>
+  <div class="wrap search-m"><label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q2" type="search" placeholder="Buscar producto o código…" autocomplete="off"></label></div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow"><i></i>Preventa abierta · Embarque 1</span>
+      <h1>Bisutería en baño de oro, <em>directo del importador</em>.</h1>
+      <p class="lead">Cadenas, pulseras, sets y dijes con precio al detal y precio al mayor. Arma tu pedido aquí y lo confirmamos contigo por WhatsApp.</p>
+      <p class="quote">“Yo no revendo, yo importo, por eso mis precios no tienen intermediarios.”</p>
+      <div class="hero-cta"><a class="btn btn-p" href="#catalogo">Ver catálogo</a><a class="btn btn-s" href="#como">Cómo comprar</a></div>
+    </div>
+    <div class="collage" id="collage"></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="trust">
+    <div><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg></span><div><b>Importador directo</b><span>Sin intermediarios, mejor precio</span></div></div>
+    <div><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z"/></svg></span><div><b>Aparta en preventa</b><span>Tu pieza queda reservada</span></div></div>
+    <div><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16v10H4z"/><path d="M4 11h16"/></svg></span><div><b>Detal y mayoreo</b><span>Elige tu tipo de precio</span></div></div>
+    <div><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-4-7.5L21 3v5h-5"/></svg></span><div><b>Atención por WhatsApp</b><span>Te respondemos personalmente</span></div></div>
+  </div>
+
+  <section id="catalogo">
+    <div class="sec-head">
+      <div><h2>Catálogo</h2><p id="count">—</p></div>
+      <div class="mode" role="tablist" aria-label="Tipo de precio">
+        <button id="m-detal" class="on" onclick="setTipo('detal')">Precio regular</button>
+        <button id="m-mayor" onclick="setTipo('mayor')">Precio mayoreo</button>
+      </div>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" style="display:none">No encontramos productos con esa búsqueda. Escríbenos por WhatsApp y te ayudamos.</div>
+  </section>
+
+  <section id="como">
+    <div class="sec-head"><div><h2>Cómo comprar</h2><p>Tres pasos, sin complicaciones.</p></div></div>
+    <div class="how">
+      <div><span class="n">1</span><b>Arma tu pedido</b><span>Elige productos y cantidades, y escoge si compras al detal o al mayor.</span></div>
+      <div><span class="n">2</span><b>Envíalo por WhatsApp</b><span>Llenas tus datos y el pedido nos llega completo, con número de orden y total.</span></div>
+      <div><span class="n">3</span><b>Confirmamos y pagas</b><span>Te confirmamos disponibilidad, entrega y pago. Recibes al llegar el embarque.</span></div>
+    </div>
+    <div class="lab" style="margin-top:22px">Formas de pago</div>
+    <div class="pay"><span>Zelle</span><span>Binance</span><span>PayPal Business</span><span>Strike</span></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><div><h2>Preguntas frecuentes</h2></div></div>
+    <div class="faq">
+      <details><summary>¿Qué significa “preventa”?</summary><p>La mercancía ya fue comprada y viene en camino a Venezuela. Al hacer tu pedido apartas tus piezas y las recibes cuando llega el embarque. Te avisamos por WhatsApp.</p></details>
+      <details><summary>¿Cuál es la diferencia entre precio regular y mayoreo?</summary><p>El precio regular (detal) es por pieza para tu uso. El precio mayoreo es para quienes compran para revender. Elige el tipo de precio al armar tu pedido y lo confirmamos contigo.</p></details>
+      <details><summary>¿Cómo pago?</summary><p>Aceptamos Zelle, Binance, PayPal Business y Strike. Los datos de pago te los enviamos por WhatsApp cuando confirmamos tu pedido.</p></details>
+      <details><summary>¿Cuánto cuesta el envío?</summary><p>Depende de tu ciudad. Lo coordinamos contigo por WhatsApp al confirmar el pedido.</p></details>
+    </div>
+  </section>
+
+  <div class="band"><div><h3>¿Tienes dudas o quieres comprar al mayor?</h3><p>Escríbenos y te atendemos personalmente.</p></div><a class="btn" href="https://wa.me/12143000974?text=Hola%20Massi%20Import%2C%20quiero%20comprar%20al%20mayor" target="_blank" rel="noopener">Hablar por WhatsApp</a></div>
+</div>
+
+<footer><div class="wrap foot" style="padding-left:16px;padding-right:16px"><div><b>Massi Import solution group</b><br>Compra directo al importador.</div><div>WhatsApp: <b>+1 214-300-0974</b><br>Pagos: Zelle · Binance · PayPal Business · Strike</div></div></footer>
+
+<div id="bar"><div class="in"><div class="t"><b id="bt">$0.00</b><span id="bi">0 piezas</span></div><button onclick="openCart()">Ver pedido →</button></div></div>
+
+<div class="ov" id="ov" onclick="if(event.target===this)closeCart()">
+  <aside class="drawer">
+    <div class="dh"><h3>Tu pedido</h3><button class="x" onclick="closeCart()" aria-label="Cerrar">✕</button></div>
+    <div class="db">
+      <div class="mode full"><button id="d-detal" class="on" onclick="setTipo('detal')">Precio regular</button><button id="d-mayor" onclick="setTipo('mayor')">Precio mayoreo</button></div>
+      <div id="lines"></div>
+      <div class="lab">Tus datos</div>
+      <div class="fld">
+        <input id="f-nom" placeholder="Nombre y apellido" autocomplete="name">
+        <input id="f-tel" placeholder="Teléfono / WhatsApp" inputmode="tel" autocomplete="tel">
+        <div class="two"><input id="f-ciu" placeholder="Ciudad" autocomplete="address-level2"><input id="f-est" placeholder="Estado"></div>
+        <input id="f-dir" placeholder="Dirección o punto de entrega (opcional)" autocomplete="street-address">
+        <select id="f-pago"><option value="">Forma de pago preferida</option><option>Zelle</option><option>Binance</option><option>PayPal Business</option><option>Strike</option></select>
+      </div>
+      <div class="err" id="err">Escribe tu nombre y tu teléfono para enviar el pedido.</div>
+    </div>
+    <div class="df">
+      <div class="sum"><span>Subtotal (<span id="s-n">0</span> piezas)</span><span id="s-sub">$0.00</span></div>
+      <div class="sum"><span>Envío</span><span>A coordinar</span></div>
+      <div class="sum g"><span>Total</span><span id="s-tot">$0.00</span></div>
+      <button class="send" id="send" onclick="enviar()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>Enviar pedido por WhatsApp</button>
+      <div class="hint">Tu pedido llega a Massi Import con número de orden. Confirmamos disponibilidad, entrega y pago contigo.</div>
+    </div>
+  </aside>
+</div>
+
+<div class="lb" id="lb" onclick="if(event.target===this)closeLb()"><div class="box"><div class="im"><img id="lb-img" alt=""><div id="lb-none" class="none" style="display:none">📷<br>Foto próximamente</div></div><div class="tx"><button class="x" onclick="closeLb()" aria-label="Cerrar">✕</button><span class="code" id="lb-code"></span><h3 id="lb-name"></h3><span class="stock" id="lb-stock"></span><div class="pp"><div><small>REGULAR</small><b id="lb-d"></b></div><div class="m"><small>MAYOREO</small><b id="lb-m"></b></div></div><div class="row" style="margin-top:12px"><div class="qty"><button onclick="lbQty(-1)">−</button><span id="lb-q">1</span><button onclick="lbQty(1)">+</button></div><button class="add" onclick="lbAdd()">Añadir al pedido</button></div></div></div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* DATOS DEL CATÁLOGO — Embarque 1. Solo mercancía y precios FINALES de venta. */
+const PRODUCTOS = [
+ {
+  "sku": "B0043",
+  "nombre": "Pulsera de tréboles azul y dorado",
+  "categoria": "Pulseras",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Stainless steel 23CM · Gold 9MM",
+  "foto": "img/B0043.jpg"
+ },
+ {
+  "sku": "B0044",
+  "nombre": "Pulsera de tréboles rojo y dorado",
+  "categoria": "Pulseras",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Stainless steel 23CM · Gold 9MM",
+  "foto": "img/B0044.jpg"
+ },
+ {
+  "sku": "B0060",
+  "nombre": "Pulsera de tréboles negro y dorado",
+  "categoria": "Pulseras",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Stainless steel 23CM · Gold 13MM",
+  "foto": "img/B0060.jpg"
+ },
+ {
+  "sku": "B0061",
+  "nombre": "Pulsera de tréboles blanco y dorado",
+  "categoria": "Pulseras",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Stainless steel 23CM · Gold 13MM",
+  "foto": "img/B0061.jpg"
+ },
+ {
+  "sku": "B0075/B0076",
+  "nombre": "Pulseras elásticas de cuentas de colores",
+  "categoria": "Pulseras",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Copper · Plate 18K",
+  "foto": ""
+ },
+ {
+  "sku": "KC003",
+  "nombre": "Cadena dorada de eslabón 60 cm",
+  "categoria": "Cadenas de hombre",
+  "precio_mayor": 10.0,
+  "precio_detal": 18.0,
+  "unidades": 12,
+  "detalle": "Copper 60CM 5N · Plate 14K Gold",
+  "foto": "img/KC003.jpg"
+ },
+ {
+  "sku": "KC005",
+  "nombre": "Cadena dorada tipo fígaro 60 cm",
+  "categoria": "Cadenas de hombre",
+  "precio_mayor": 10.0,
+  "precio_detal": 18.0,
+  "unidades": 12,
+  "detalle": "Copper 60CM 4N · Plate 14K Gold",
+  "foto": "img/KC005.jpg"
+ },
+ {
+  "sku": "KC008",
+  "nombre": "Cadena dorada eslabón cubano gruesa 60 cm",
+  "categoria": "Cadenas de hombre",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 12,
+  "detalle": "Copper 60CM 6N · Plate 14K Gold",
+  "foto": "img/KC008.jpg"
+ },
+ {
+  "sku": "KC010",
+  "nombre": "Cadena dorada fina 45 + 5 cm",
+  "categoria": "Cadenas de hombre",
+  "precio_mayor": 10.0,
+  "precio_detal": 15.0,
+  "unidades": 36,
+  "detalle": "Copper 45+5CM · Plate 18K Gold",
+  "foto": "img/KC010.jpg"
+ },
+ {
+  "sku": "B0282",
+  "nombre": "Pulsera eslabón cubano dorada 12 mm",
+  "categoria": "Pulseras de hombre",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Alloy 22CM 12MM · Plat 14K Gold",
+  "foto": "img/B0282.jpg"
+ },
+ {
+  "sku": "B0283",
+  "nombre": "Pulsera eslabón cubano dorada 10 mm",
+  "categoria": "Pulseras de hombre",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Alloy 21CM 10MM · Plat 14K Gold",
+  "foto": "img/B0283.jpg"
+ },
+ {
+  "sku": "NS001",
+  "nombre": "Set aretes + collar + brazalete + anillo, oro champán, dijes de mariquita roja",
+  "categoria": "Sets de niña",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 6,
+  "detalle": "Copper alloy · Champagne gold",
+  "foto": "img/NS001.jpg"
+ },
+ {
+  "sku": "NS023",
+  "nombre": "Set aretes + collar + brazalete + anillo, oro champán, dijes de cereza",
+  "categoria": "Sets de niña",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 6,
+  "detalle": "Copper alloy · Champagne gold",
+  "foto": "img/NS023.jpg"
+ },
+ {
+  "sku": "NS027",
+  "nombre": "Set aretes + collar + brazalete + anillo, oro champán, dijes de corazón rojo",
+  "categoria": "Sets de niña",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 6,
+  "detalle": "Copper alloy · Champagne gold",
+  "foto": "img/NS027.jpg"
+ },
+ {
+  "sku": "NS031",
+  "nombre": "Set aretes + collar + brazalete + anillo, oro champán, dijes de flor morada",
+  "categoria": "Sets de niña",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 6,
+  "detalle": "Copper alloy · Champagne gold",
+  "foto": "img/NS031.jpg"
+ },
+ {
+  "sku": "NS040",
+  "nombre": "Set aretes + collar + brazalete + anillo, oro champán, dijes de mariposa amarilla",
+  "categoria": "Sets de niña",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 6,
+  "detalle": "Copper alloy · Champagne gold",
+  "foto": "img/NS040.jpg"
+ },
+ {
+  "sku": "NS071",
+  "nombre": "Set aretes + collar + brazalete + anillo, oro champán, dijes de corazón morado y rosado",
+  "categoria": "Sets de niña",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 6,
+  "detalle": "Copper alloy · Champagne gold",
+  "foto": "img/NS071.jpg"
+ },
+ {
+  "sku": "NS087",
+  "nombre": "Aretes y collar con circones cuadrados blancos",
+  "categoria": "Sets collar + zarcillos",
+  "precio_mayor": 10.0,
+  "precio_detal": 15.0,
+  "unidades": 6,
+  "detalle": "Chapa de oro 18K",
+  "foto": "img/NS087.jpg"
+ },
+ {
+  "sku": "NS083",
+  "nombre": "Aretes y collar con circones estrella rosada",
+  "categoria": "Sets collar + zarcillos",
+  "precio_mayor": 10.0,
+  "precio_detal": 15.0,
+  "unidades": 6,
+  "detalle": "Chapa de oro 18K",
+  "foto": "img/NS083.jpg"
+ },
+ {
+  "sku": "NS101",
+  "nombre": "Aretes, collar y anillo con circones cuadrados blancos",
+  "categoria": "Sets collar + zarcillos",
+  "precio_mayor": 10.0,
+  "precio_detal": 18.0,
+  "unidades": 6,
+  "detalle": "Chapa de oro 14K",
+  "foto": "img/NS101.jpg"
+ },
+ {
+  "sku": "NS253",
+  "nombre": "Brazalete y anillo dorados con esferas",
+  "categoria": "Sets collar + zarcillos",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 6,
+  "detalle": "Chapa de oro 18K",
+  "foto": "img/NS253.jpg"
+ },
+ {
+  "sku": "NS255",
+  "nombre": "Brazalete ancho y anillo dorados",
+  "categoria": "Sets collar + zarcillos",
+  "precio_mayor": 10.0,
+  "precio_detal": 20.0,
+  "unidades": 6,
+  "detalle": "Chapa de oro 18K",
+  "foto": "img/NS255.jpg"
+ },
+ {
+  "sku": "KP0029",
+  "nombre": "Dije corazón y balón de fútbol",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 8.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0029.jpg"
+ },
+ {
+  "sku": "KP0326",
+  "nombre": "Dije medallón pequeño con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 8.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0326.jpg"
+ },
+ {
+  "sku": "KP0330",
+  "nombre": "Dije medallón redondo con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 8.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0330.jpg"
+ },
+ {
+  "sku": "KP0333",
+  "nombre": "Dije medallón con monograma y circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 8.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0333.jpg"
+ },
+ {
+  "sku": "KP0351",
+  "nombre": "Dije flor con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 8.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0351.jpg"
+ },
+ {
+  "sku": "KP0353",
+  "nombre": "Dije flor de cristal",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 8.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0353.jpg"
+ },
+ {
+  "sku": "KP0380",
+  "nombre": "Dijes de árbol de la vida",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 8.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0380.jpg"
+ },
+ {
+  "sku": "KP0393",
+  "nombre": "Dije trébol con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0393.jpg"
+ },
+ {
+  "sku": "KP0394",
+  "nombre": "Dije mariposa con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0394.jpg"
+ },
+ {
+  "sku": "KP0395",
+  "nombre": "Dije corazón con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0395.jpg"
+ },
+ {
+  "sku": "KP0398",
+  "nombre": "Dije billete de 100 dólares",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 8.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0398.jpg"
+ },
+ {
+  "sku": "KP0513",
+  "nombre": "Dije torre Eiffel con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0513.jpg"
+ },
+ {
+  "sku": "KP0515",
+  "nombre": "Dije doble C con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 18K Gold",
+  "foto": "img/KP0515.jpg"
+ },
+ {
+  "sku": "KP0516",
+  "nombre": "Dije cruz con circonias",
+  "categoria": "Dijes",
+  "precio_mayor": 5.5,
+  "precio_detal": 10.0,
+  "unidades": 6,
+  "detalle": "Copper zircon · Plate 14K Gold",
+  "foto": "img/KP0516.jpg"
+ }
+];
+
+const WA = "12143000974";
+const ESTADO = "Preventa";
+const ESTADO_LARGO = "Preventa — en tránsito a Venezuela";
+const fmt = n => "$" + n.toFixed(2);
+const $ = id => document.getElementById(id);
+let cat = "Todos", txt = "", tipo = "detal", lbSku = null, lbQ = 1;
+const cart = {}, sel = {};
+const cats = ["Todos", ...new Set(PRODUCTOS.map(p => p.categoria))];
+const bySku = s => PRODUCTOS.find(p => p.sku === s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const price = p => tipo === "mayor" ? p.precio_mayor : p.precio_detal;
+
+function collage(){
+  const pick = ["NS001","KC008","NS253","KP0394"].map(bySku).filter(p => p && p.foto);
+  $("collage").innerHTML = pick.slice(0,3).map(p => `<div><img src="${p.foto}" alt="${esc(p.nombre)}" width="512" height="512" decoding="async"></div>`).join("");
+}
+function chips(){
+  $("chips").innerHTML = cats.map((c,i) => {
+    const p = c === "Todos" ? null : PRODUCTOS.find(x => x.categoria === c && x.foto);
+    const n = c === "Todos" ? PRODUCTOS.length : PRODUCTOS.filter(x => x.categoria === c).length;
+    return `<button class="chip ${c===cat?'on':''}" data-i="${i}">${p ? `<img src="${p.foto}" alt="">` : `<span class="em">✦</span>`}${esc(c)} <small>${n}</small></button>`;
+  }).join("");
+  $("chips").querySelectorAll(".chip").forEach(b => b.onclick = () => { cat = cats[+b.dataset.i]; chips(); grid(); });
+}
+function list(){
+  return PRODUCTOS.filter(p => (cat === "Todos" || p.categoria === cat) &&
+    (!txt || (p.nombre + " " + p.sku + " " + p.categoria).toLowerCase().includes(txt)));
+}
+function grid(){
+  const l = list();
+  $("count").textContent = l.length + (l.length === 1 ? " producto" : " productos") + " · precios en USD · " + ESTADO_LARGO;
+  $("empty").style.display = l.length ? "none" : "block";
+  $("grid").innerHTML = l.map(p => {
+    const q = sel[p.sku] || 1, other = tipo === "mayor" ? ["Regular", p.precio_detal] : ["Mayoreo", p.precio_mayor];
+    return `<article class="card">
+      <div class="ph" onclick="openLb('${p.sku}')">${p.foto ? `<img src="${p.foto}" alt="${esc(p.nombre)}" width="512" height="512" loading="lazy" decoding="async">` : `<div class="none">📷<br>Foto próximamente</div>`}<span class="tag">${ESTADO}</span></div>
+      <div class="body">
+        <span class="code">${esc(p.categoria)} · ${esc(p.sku)}</span>
+        <div class="name">${esc(p.nombre)}</div>
+        <div class="prices"><span class="main"><small class="pl">${tipo === "mayor" ? "Mayoreo" : "Regular"}</small>${fmt(price(p))}</span><span class="alt">${other[0]} <b>${fmt(other[1])}</b></span></div>
+        <span class="stock"><b>${p.unidades}</b> disponibles</span>
+        <div class="row"><div class="qty"><button onclick="chg('${p.sku}',-1)" aria-label="Menos">−</button><span id="q-${p.sku}">${q}</span><button onclick="chg('${p.sku}',1)" aria-label="Más">+</button></div>
+        <button class="add" id="a-${p.sku}" onclick="add('${p.sku}')">Añadir</button></div>
+      </div></article>`;
+  }).join("");
+}
+function chg(s,d){ const p = bySku(s); sel[s] = Math.max(1, Math.min(p.unidades, (sel[s]||1)+d)); $("q-"+s).textContent = sel[s]; }
+function add(s,q){
+  const p = bySku(s); q = q || sel[s] || 1;
+  const before = cart[s] || 0; cart[s] = Math.min(p.unidades, before + q);
+  toast(cart[s] === before ? "Ya tienes todas las unidades disponibles" : "✓ Añadido al pedido");
+  const b = $("a-"+s); if(b){ b.classList.add("ok"); b.textContent = "✓ Añadido"; setTimeout(() => { b.classList.remove("ok"); b.textContent = "Añadir"; }, 1200); }
+  refresh();
+}
+function totals(){ let n=0,t=0; for(const s in cart){ n+=cart[s]; t+=cart[s]*price(bySku(s)); } return {n,t}; }
+function refresh(){
+  const {n,t} = totals();
+  $("cn").textContent = n; $("bt").textContent = fmt(t); $("bi").textContent = n + (n===1?" pieza":" piezas") + " · " + (tipo==="mayor"?"mayoreo":"regular");
+  $("bar").style.display = n && !$("ov").classList.contains("open") ? "block" : "none";
+  $("s-n").textContent = n; $("s-sub").textContent = fmt(t); $("s-tot").textContent = fmt(t);
+  $("send").disabled = !n;
+  lines();
+}
+function lines(){
+  const ks = Object.keys(cart);
+  $("lines").innerHTML = ks.length ? ks.map(s => { const p = bySku(s); return `<div class="li">
+    ${p.foto ? `<img src="${p.foto}" alt="">` : `<img alt="">`}
+    <div class="i"><div class="nm">${esc(p.nombre)}</div><div class="sm">${esc(p.sku)} · ${fmt(price(p))} c/u</div>
+    <div class="ctl"><div class="qty"><button onclick="cq('${s}',-1)">−</button><span>${cart[s]}</span><button onclick="cq('${s}',1)">+</button></div><button class="rm" onclick="rm('${s}')">Quitar</button></div></div>
+    <div class="pr">${fmt(price(p)*cart[s])}</div></div>`; }).join("")
+    : `<div class="empty" style="padding:28px 0">Tu pedido está vacío.<br>Añade productos desde el catálogo.</div>`;
+}
+function cq(s,d){ const p = bySku(s); const v = cart[s]+d; if(v<1) delete cart[s]; else cart[s] = Math.min(p.unidades, v); refresh(); }
+function rm(s){ delete cart[s]; refresh(); }
+function setTipo(t){
+  tipo = t;
+  ["m","d"].forEach(k => { $(k+"-detal").classList.toggle("on", t==="detal"); $(k+"-mayor").classList.toggle("on", t==="mayor"); });
+  grid(); refresh();
+}
+function openCart(){ $("ov").classList.add("open"); document.body.style.overflow="hidden"; refresh(); }
+function closeCart(){ $("ov").classList.remove("open"); document.body.style.overflow=""; refresh(); }
+function orderNo(){ const d = new Date(), p = n => String(n).padStart(2,"0"); return "MI-" + String(d.getFullYear()).slice(2) + p(d.getMonth()+1) + p(d.getDate()) + "-" + Math.random().toString(36).slice(2,6).toUpperCase(); }
+function enviar(){
+  const nom = $("f-nom").value.trim(), tel = $("f-tel").value.trim();
+  if(!nom || !tel){ $("err").style.display = "block"; (!nom ? $("f-nom") : $("f-tel")).focus(); return; }
+  $("err").style.display = "none";
+  const {n,t} = totals(), no = orderNo();
+  const L = [`*PEDIDO ${no}* — Massi Import`, `Tipo de precio: ${tipo==="mayor"?"MAYOREO":"REGULAR (detal)"}`, ""];
+  for(const s in cart){ const p = bySku(s); L.push(`• ${p.nombre} (${p.sku}) x${cart[s]} — ${fmt(price(p))} c/u = ${fmt(price(p)*cart[s])}`); }
+  L.push("", `Piezas: ${n}`, `*Total: ${fmt(t)}* (envío a coordinar)`, `Estado: ${ESTADO_LARGO}`, "", "*Mis datos*",
+    `Nombre: ${nom}`, `Teléfono: ${tel}`, `Ciudad: ${$("f-ciu").value.trim() || "—"}`, `Estado: ${$("f-est").value.trim() || "—"}`,
+    `Dirección / entrega: ${$("f-dir").value.trim() || "—"}`, `Forma de pago: ${$("f-pago").value || "—"}`);
+  window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(L.join("\n")), "_blank", "noopener");
+}
+function openLb(s){
+  const p = bySku(s); lbSku = s; lbQ = 1;
+  if(p.foto){ $("lb-img").src = p.foto; $("lb-img").style.display = ""; $("lb-none").style.display = "none"; } else { $("lb-img").removeAttribute("src"); $("lb-img").style.display = "none"; $("lb-none").style.display = "grid"; } $("lb-img").alt = p.nombre; $("lb-code").textContent = p.categoria + " · " + p.sku;
+  $("lb-name").textContent = p.nombre; $("lb-stock").innerHTML = `<b>${p.unidades}</b> disponibles · ${ESTADO_LARGO}`;
+  $("lb-d").textContent = fmt(p.precio_detal); $("lb-m").textContent = fmt(p.precio_mayor); $("lb-q").textContent = 1;
+  $("lb").classList.add("open");
+}
+function closeLb(){ $("lb").classList.remove("open"); }
+function lbQty(d){ const p = bySku(lbSku); lbQ = Math.max(1, Math.min(p.unidades, lbQ+d)); $("lb-q").textContent = lbQ; }
+function lbAdd(){ add(lbSku, lbQ); closeLb(); }
+let tt; function toast(m){ const e = $("toast"); e.textContent = m; e.classList.add("show"); clearTimeout(tt); tt = setTimeout(() => e.classList.remove("show"), 1600); }
+function search(v){ txt = v.trim().toLowerCase(); $("q").value = v; $("q2").value = v; grid(); }
+$("q").addEventListener("input", e => search(e.target.value));
+$("q2").addEventListener("input", e => search(e.target.value));
+document.addEventListener("keydown", e => { if(e.key === "Escape"){ closeLb(); closeCart(); } });
+collage(); chips(); grid(); refresh();
+</script>
+</body>
+</html>
