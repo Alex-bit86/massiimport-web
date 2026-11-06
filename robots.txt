@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+# Massi Import - reconstruccion de Pages 2026-11-06
